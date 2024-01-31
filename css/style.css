@@ -1,0 +1,272 @@
+/**Fonts**/
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Kanit:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Kanit:wght@200;400&family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Kanit:wght@200;400&family=Lexend:wght@600&family=Raleway:wght@300&display=swap');
+
+/* Button Each state */
+
+a:visited { text-decoration: none; color:rgb(255, 255, 255); }
+a:hover { text-decoration: none; color:rgb(255, 255, 255); }
+a:focus { text-decoration: none; color:rgb(255, 255, 255); }
+a:hover, a:active { text-decoration: none; color:rgb(255, 255, 255) }
+
+/**Everything Else**/
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav{
+    background: rgb(28, 28, 29);
+    height: 80px;
+    width: 100%;
+    font-weight: bold;
+}
+label.logo{
+    color: white;
+    font-size: 35px;;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+nav ul li a:hover{
+    transition: 0.5s;
+    color: rgb(50, 71, 255);
+}
+a.active,a:hover{
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media only screen and (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    .wrapper{
+        width: 100% !important;
+    }
+}
+@media only screen and (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: rgb(28, 28, 29);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 1;
+
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: gray;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .wrapper{
+        width: 100% !important;
+    }
+}
+section{
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/2020_Banner.jpg") no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+    width: 100%;
+    height: 500px;
+    z-index: 12;
+    top: 100px;
+    background-position: center center;
+    -webkit-background-size: cover;
+
+}
+section h2{
+    padding-top: 8%;
+    font-size: 70px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+}
+.content-area{
+    width: 70%;
+    position: relative;
+    background: #ffffff;
+    margin: 150px auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.content-area h2{
+    font-family: 'Lexend', sans-serif;
+    letter-spacing: 4px;
+    padding-top: 30px;
+    font-size: 40px;
+    margin: 0;
+}
+.wrapper{
+    width: 1170px;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    padding: 5px;
+}
+.wrapper h2{
+    font-family: 'Lexend', sans-serif;
+    padding: 10px;
+    font-size: 45px;
+}
+.wrapper p{
+    font-size: 20px;
+}
+footer{
+    background-color: #000;
+    clear: both;
+    position: relative;
+    bottom: 0;
+    width: 100%;  
+}
+.copyright{
+    text-align: center;
+    width: 100%;
+}
+.copyright p{
+    color: white;
+    font-size: 20px;
+    padding: 50px 20px;
+}
+
+.content-area img{
+    max-width: 420px;
+    float: left;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+h1, h2{
+    font-family: 'Lexend', sans-serif;
+}
+
+.container{
+    display: flex;
+    height: 75vh;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    flex-grow: 1;
+    padding: 0 40px;
+    font-family: 'Raleway', sans-serif;
+    background-color: aliceblue;
+}
+
+.div1, .div2{
+    width: 21em;
+    height: 25em;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 25px black;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+.container h1{
+    color:rgb(5, 85, 233);
+    margin-bottom: 30px;
+}
+
+.pageheading h2{
+    color: #000;
+    font-size: 4rem;
+    text-align: center;
+    margin: 0;
+    padding-top: 20px;
+    background-color: aliceblue;
+}
+
+.container button{
+    padding: 10px 20px;
+    background-color: rgb(5, 85, 233);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 30px;
+    transition: 0.2s;
+    font-family: 'Lexend', sans-serif;
+}
+
+.container button:hover{
+    background-color: rgb(4, 43, 117);
+}
+
+@media(max-width: 1200px){
+    .container{
+        height: 100%;
+        flex-direction: column;
+    }
+    .div1, .div2{
+        max-width: 80%;
+        padding: 30px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    .pageheading h2{
+        font-size: 3rem;
+        margin: 0;
+        padding-top: 20px;
+    }
+    .content-area img{
+        max-width: 70%;
+    }
+}
