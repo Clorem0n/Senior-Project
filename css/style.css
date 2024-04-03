@@ -12,63 +12,73 @@ a:focus { text-decoration: none; color:rgb(255, 255, 255); }
 a:hover, a:active { text-decoration: none; color:rgb(255, 255, 255) }
 
 /**Everything Else**/
-*{
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-main{
+main {
     min-height: 95vh;
 }
 
-nav{
+nav {
     background: rgb(28, 28, 29);
     height: 80px;
     width: 100%;
     font-weight: bold;
+    padding: 0 100px;
 }
-label.logo{
+
+label.logo {
     color: white;
-    font-size: 35px;;
+    font-size: 35px;
     line-height: 80px;
     padding: 0 100px;
     font-weight: bold;
 }
 
-label.logo a{
+label.logo a {
     transition: 0s;
     color: white;
 }
 
-nav ul{
+nav ul {
     float: right;
     margin-right: 20px;
 }
-nav ul li{
+
+nav ul li {
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
+    position: relative;
+    overflow: hidden;
 }
-nav ul li a{
+
+nav ul li a {
     color: white;
-    font-size: 22px;
+    font-size: 18px;
     text-transform: uppercase;
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
     transition: 0.5s;
     color: rgb(50, 71, 255);
 }
-a.active,a:hover{
+
+a.active,
+a:hover {
     transition: .5s;
 }
 
-.checkbtn{
+.checkbtn {
     font-size: 30px;
     color: white;
     float: right;
@@ -77,26 +87,35 @@ a.active,a:hover{
     cursor: pointer;
     display: none;
 }
-#check{
+
+#check {
     display: none;
 }
-@media only screen and (max-width: 952px){
-    label.logo{
+
+@media only screen and (max-width: 952px) {
+    label.logo {
         font-size: 30px;
         padding-left: 50px;
+        position: absolute;
     }
-    nav ul li a{
+
+    nav ul li a {
         font-size: 16px;
     }
-    .wrapper, .wrapper2, .wrapper3{
+
+    .wrapper,
+    .wrapper2,
+    .wrapper3 {
         width: 100% !important;
     }
 }
-@media only screen and (max-width: 858px){
-    .checkbtn{
+
+@media only screen and (max-width: 1024px) {
+    .checkbtn {
         display: block;
     }
-    ul{
+
+    ul {
         position: absolute;
         width: 100%;
         height: 100vh;
@@ -108,50 +127,58 @@ a.active,a:hover{
         z-index: 1;
 
     }
-    nav ul li{
+
+    nav ul li {
         display: block;
         margin: 50px 0;
         line-height: 30px;
     }
-    nav ul li a{
+
+    nav ul li a {
         font-size: 20px;
     }
-    a:hover,a.active{
+
+    a:hover,
+    a.active {
         background: none;
         color: gray;
     }
-    #check:checked ~ ul{
+
+    #check:checked~ul {
         left: 0;
     }
-    .wrapper, .wrapper2, .wrapper3{
+
+    .wrapper,
+    .wrapper2,
+    .wrapper3 {
         width: 100% !important;
     }
 }
 
 /** THE BIG HEADER THING **/
 
-section{
+.home-header {
     background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/2020_Banner.jpg") no-repeat;
     background-size: cover;
-    height: calc(100vh - 80px);
     width: 100%;
     height: 600px;
     z-index: 12;
     top: 100px;
     background-position: center center;
-    -webkit-background-size: cover;
 
 }
-section h2{
+
+.home-header h2 {
     padding-top: 8%;
     font-size: 70px;
     margin-left: 200px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #fff;
     text-align: left;
+    max-width: 1024px;
 }
 
-section button{
+.home-header button {
     padding: 20px 30px;
     background-color: white;
     color: black;
@@ -161,40 +188,44 @@ section button{
     text-transform: uppercase;
     font-weight: bold;
     font-size: 20px;
-    margin-top: 175px;
     margin-left: 200px;
+    margin-bottom: 150px;
+    margin-top: 50px;
     transition: 0.2s;
     font-family: 'Lexend', sans-serif;
+    display: block;
+    max-width: 1024px;
 }
 
-section p{
+.home-header p {
     color: white;
     font-family: 'Raleway', sans-serif;
-    margin-top: 20px;
     margin-left: 200px;
     font-size: 20px;
+    max-width: 1024px;
 }
 
-section button:hover{
+.home-header button:hover {
     background-color: rgb(201, 193, 193);
     color: black;
 }
 
-section button a{
+.home-header button a {
     color: black;
 }
 
 /** content **/
 
-.content-area{
-    width: 70%;
+.content-area {
+    max-width: 80%;
     position: relative;
     background: #ffffff;
-    margin: 150px auto; 
+    margin: 150px auto;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
-.content-area h2{
+
+.content-area h2 {
     font-family: 'Lexend', sans-serif;
     letter-spacing: 0px;
     padding-top: 30px;
@@ -202,7 +233,9 @@ section button a{
     margin: 0;
 }
 
-.wrapper, .wrapper2, .wrapper3{
+.wrapper,
+.wrapper2,
+.wrapper3 {
     width: 100%;
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
@@ -210,26 +243,32 @@ section button a{
     margin-bottom: 1rem;
     margin-top: 100px;
 }
-.wrapper, .wrapper2, .wrapper3 h2{
+
+.wrapper,
+.wrapper2,
+.wrapper3 h2 {
     font-family: 'Lexend', sans-serif;
     padding: 10px;
     font-size: 45px;
 }
-.wrapper, .wrapper2, .wrapper3 p{
+
+.wrapper,
+.wrapper2,
+.wrapper3 p {
     font-size: 20px;
     font-weight: normal;
     font-family: 'Raleway', sans-serif;
 }
 
-.wrapper2 h2{
+.wrapper2 h2 {
     text-align: right;
 }
 
-.wrapper2 p{
+.wrapper2 p {
     text-align: right;
 }
 
-.image-left img{
+.image-left img {
     max-width: 420px;
     float: left;
     border: 3px solid black;
@@ -237,7 +276,7 @@ section button a{
     margin-right: 15px;
 }
 
-.image-right img{
+.image-right img {
     max-width: 420px;
     float: right;
     border: 3px solid black;
@@ -246,7 +285,7 @@ section button a{
     margin-top: 100px;
 }
 
-.image-left1 img{
+.image-left1 img {
     max-width: 420px;
     float: left;
     border: 3px solid black;
@@ -256,28 +295,31 @@ section button a{
 }
 
 
-footer{
+footer {
     background-color: #000;
     clear: both;
     position: relative;
     bottom: 0;
-    width: 100%;  
+    width: 100%;
 }
-.copyright{
+
+.copyright {
     text-align: center;
     width: 100%;
 }
-.copyright p{
+
+.copyright p {
     color: white;
     font-size: 20px;
     padding: 50px 20px;
 }
 
-h1, h2{
+h1,
+h2 {
     font-family: 'Lexend', sans-serif;
 }
 
-.container{
+.container {
     display: flex;
     height: 75vh;
     justify-content: center;
@@ -289,7 +331,8 @@ h1, h2{
     background-color: aliceblue;
 }
 
-.div1, .div2{
+.div1,
+.div2 {
     width: 21em;
     height: 25em;
     background-color: #ffffff;
@@ -298,12 +341,12 @@ h1, h2{
     border-radius: 10px;
 }
 
-.container h1{
-    color:rgb(5, 85, 233);
+.container h1 {
+    color: rgb(5, 85, 233);
     margin-bottom: 30px;
 }
 
-.pageheading h2{
+.pageheading h2 {
     color: #000;
     font-size: 4rem;
     text-align: center;
@@ -312,7 +355,7 @@ h1, h2{
     background-color: aliceblue;
 }
 
-.container button{
+.container button {
     padding: 10px 20px;
     background-color: rgb(5, 85, 233);
     color: #fff;
@@ -324,62 +367,74 @@ h1, h2{
     margin-top: 30px;
     transition: 0.2s;
     font-family: 'Lexend', sans-serif;
+    display: block;
 }
 
-.container button a{
+.container button a {
     color: white;
 }
 
-.container button:hover{
+.container button:hover {
     background-color: rgb(4, 43, 117);
 }
 
-@media(max-width: 952px){
-    .container{
+@media(max-width: 1024px) {
+    .container {
         height: 100%;
         flex-direction: column;
     }
-    .div1, .div2{
+
+    .div1,
+    .div2 {
         max-width: 80%;
         padding: 30px;
         margin-top: 30px;
         margin-bottom: 50px;
     }
-    .pageheading h2{
+
+    .pageheading h2 {
         font-size: 3rem;
         margin: 0;
         padding-top: 20px;
     }
-    .content-area{
+
+    .content-area {
         flex-direction: column;
         text-align: center;
         width: 90%;
     }
 
-    .content-area img{
+    .content-area img {
         float: none;
         margin: auto;
         display: block;
     }
-    .wrapper, .wrapper2, .wrapper3{
+
+    .wrapper,
+    .wrapper2,
+    .wrapper3 {
         overflow: hidden;
         margin-top: 0;
     }
-    .wrapper2 h2{
+
+    .wrapper2 h2 {
         text-align: center;
     }
-    .wrapper2 p{
+
+    .wrapper2 p {
         text-align: center;
     }
-    section h2{
+
+    .home-header h2 {
         margin: auto;
         margin-left: auto;
         display: block;
         text-align: center;
         width: 80%;
+        font-size: 50px;
     }
 
-    section p{
+    .home-header p {
         color: white;
         font-family: 'Raleway', sans-serif;
         text-align: center;
@@ -387,21 +442,25 @@ h1, h2{
         width: 80%;
     }
 
-    section button{
+    .home-header button {
         margin: auto;
         margin-top: 50px;
         margin-left: auto;
         display: block;
+        margin-bottom: 500px;
     }
-    .image-left{
+
+    .image-left {
         margin-top: auto;
         display: block;
     }
-    .image-right{
+
+    .image-right {
         margin-top: auto;
         display: block;
     }
-    .image-left1{
+
+    .image-left1 {
         margin-top: auto;
         display: block;
     }
@@ -412,29 +471,119 @@ h1, h2{
 
 /** ABOUT ME PAGE **/
 
-.about-banner{
+.about-banner {
     background-color: rgb(28, 28, 29);
     width: 100%;
     height: 900px;
 }
 
-.about-intro{
-    font-size: 24px;
+.about-intro {
+    font-size: 26px;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     color: white;
     text-align: center;
-    padding-top: 300px;
+    padding-top: 250px;
     padding-left: 200px;
     margin-bottom: 1rem;
     width: 50%;
+    max-width: 1024px;
 }
 
-.about-banner img{
-    height: 800px;
+.about-intro h1{
+    margin-bottom: 40px;
+}
+
+.about-intro p{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+    line-height: 45px;
+}
+
+.about-banner img {
+    height: 700px;
     float: right;
     clear: both;
     margin-right: 200px;
-    padding-top: 50px;
+    margin-top: 50px;
+    border: 8px solid white;
+    border-radius: 100px;
 }
 
+.about-history{
+    background-color: rgb(230, 228, 228);
+    margin-bottom: 50px;
+    width: 100%;
+    padding-top: 25px;
+    font-size: 24px;
+}
+
+.about-history-content{
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 50px;
+    max-width: 1024px;
+    text-align: center;
+}
+
+.about-history-content p{
+    max-width: 1024px;
+}
+
+
+.about-history h2{
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    font-size: 36px;
+    margin: 0 auto;
+    background-color: rgb(230, 228, 228);
+  }
+
+.about-content{
+    font-size: 30px;
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    max-width: 1024px;
+    margin-bottom: 125px;
+    margin-top: 50px;
+  }
+  
+  
+  .about-content h2{
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    font-size: 36px;
+    background-color: white;
+    margin: 0 auto;
+  }
+  
+  .about-list{
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 20px;
+    width: 50%;
+    margin: 30px;
+  }
+  
+  .about-list li{
+    margin: 20px;
+    font-size: 24px;
+    font-weight: normal;
+    display: list-item;
+  }
+
+  .about-list-img{
+    float: right;
+    clear: both;
+    height: 300px;
+    width: 500px;
+    margin: 20px;
+    border: 4px solid black;
+    border-radius: 50px;
+  }
+  
