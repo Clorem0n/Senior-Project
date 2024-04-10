@@ -15,9 +15,14 @@ a:hover, a:active { text-decoration: none; color:rgb(255, 255, 255) }
 * {
     padding: 0;
     margin: 0;
-    text-decoration: none;
+    text-decoration: none !important;
     list-style: none;
     box-sizing: border-box;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
 }
 
 body {
@@ -34,6 +39,7 @@ nav {
     width: 100%;
     font-weight: bold;
     padding: 0 100px;
+    text-decoration: none;
 }
 
 label.logo {
@@ -94,8 +100,8 @@ a:hover {
 
 @media only screen and (max-width: 952px) {
     label.logo {
-        font-size: 30px;
-        padding-left: 50px;
+        font-size: 20px;
+        padding-left: 10px;
         position: absolute;
     }
 
@@ -104,9 +110,9 @@ a:hover {
     }
 
     .wrapper,
-    .wrapper2,
-    .wrapper3 {
+    .wrapper2 {
         width: 100% !important;
+        justify-content: center;
     }
 }
 
@@ -149,8 +155,7 @@ a:hover {
     }
 
     .wrapper,
-    .wrapper2,
-    .wrapper3 {
+    .wrapper2 {
         width: 100% !important;
     }
 }
@@ -228,33 +233,29 @@ a:hover {
 .content-area h2 {
     font-family: 'Lexend', sans-serif;
     letter-spacing: 0px;
-    padding-top: 30px;
     font-size: 40px;
+    padding: 30px;
     margin: 0;
 }
 
 .wrapper,
-.wrapper2,
-.wrapper3 {
+.wrapper2 {
     width: 100%;
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
-    padding: 50px;
     margin-bottom: 1rem;
     margin-top: 100px;
 }
 
 .wrapper,
-.wrapper2,
-.wrapper3 h2 {
+.wrapper2 h2 {
     font-family: 'Lexend', sans-serif;
-    padding: 10px;
     font-size: 45px;
+    padding: 30px;
 }
 
 .wrapper,
-.wrapper2,
-.wrapper3 p {
+.wrapper2 p {
     font-size: 20px;
     font-weight: normal;
     font-family: 'Raleway', sans-serif;
@@ -273,7 +274,7 @@ a:hover {
     float: left;
     border: 3px solid black;
     border-radius: 10px;
-    margin-right: 15px;
+    margin-right: 30px;
 }
 
 .image-right img {
@@ -281,7 +282,7 @@ a:hover {
     float: right;
     border: 3px solid black;
     border-radius: 10px;
-    margin-left: 15px;
+    margin-left: 30px;
     margin-top: 100px;
 }
 
@@ -319,7 +320,7 @@ h2 {
     font-family: 'Lexend', sans-serif;
 }
 
-.container {
+.page-container{
     display: flex;
     height: 75vh;
     justify-content: center;
@@ -341,7 +342,7 @@ h2 {
     border-radius: 10px;
 }
 
-.container h1 {
+.page-container h1 {
     color: rgb(5, 85, 233);
     margin-bottom: 30px;
 }
@@ -355,7 +356,7 @@ h2 {
     background-color: aliceblue;
 }
 
-.container button {
+.page-container button {
     padding: 10px 20px;
     background-color: rgb(5, 85, 233);
     color: #fff;
@@ -370,16 +371,16 @@ h2 {
     display: block;
 }
 
-.container button a {
+.page-container button a {
     color: white;
 }
 
-.container button:hover {
+.page-container button:hover {
     background-color: rgb(4, 43, 117);
 }
 
 @media(max-width: 1024px) {
-    .container {
+    .page-container {
         height: 100%;
         flex-direction: column;
     }
@@ -411,8 +412,7 @@ h2 {
     }
 
     .wrapper,
-    .wrapper2,
-    .wrapper3 {
+    .wrapper2 {
         overflow: hidden;
         margin-top: 0;
     }
@@ -483,18 +483,18 @@ h2 {
     font-weight: bold;
     color: white;
     text-align: center;
-    padding-top: 250px;
+    padding-top: 150px;
     padding-left: 200px;
     margin-bottom: 1rem;
     width: 50%;
     max-width: 1024px;
 }
 
-.about-intro h1{
+.about-intro h1 {
     margin-bottom: 40px;
 }
 
-.about-intro p{
+.about-intro p {
     padding-left: 20px;
     padding-right: 20px;
     margin: 0 auto;
@@ -502,16 +502,16 @@ h2 {
 }
 
 .about-banner img {
-    height: 700px;
+    height: 575px;
     float: right;
     clear: both;
-    margin-right: 200px;
+    margin-right: 300px;
     margin-top: 50px;
     border: 8px solid white;
     border-radius: 100px;
 }
 
-.about-history{
+.about-history {
     background-color: rgb(230, 228, 228);
     margin-bottom: 50px;
     width: 100%;
@@ -519,7 +519,7 @@ h2 {
     font-size: 24px;
 }
 
-.about-history-content{
+.about-history-content {
     margin: 0 auto;
     padding-right: 20px;
     padding-left: 20px;
@@ -528,21 +528,21 @@ h2 {
     text-align: center;
 }
 
-.about-history-content p{
+.about-history-content p {
     max-width: 1024px;
 }
 
 
-.about-history h2{
+.about-history h2 {
     text-align: center;
     padding-bottom: 30px;
     padding-top: 10px;
     font-size: 36px;
     margin: 0 auto;
     background-color: rgb(230, 228, 228);
-  }
+}
 
-.about-content{
+.about-content {
     font-size: 30px;
     margin: 0 auto;
     padding-right: 20px;
@@ -550,40 +550,82 @@ h2 {
     max-width: 1024px;
     margin-bottom: 125px;
     margin-top: 50px;
-  }
-  
-  
-  .about-content h2{
+}
+
+
+.about-content h2 {
     text-align: center;
     padding-bottom: 30px;
     padding-top: 10px;
     font-size: 36px;
     background-color: white;
     margin: 0 auto;
-  }
-  
-  .about-list{
+}
+
+.about-content h3 {
+    font-size: 28px;
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    max-width: 1024px;
+    margin-top: 70px;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.about-list {
     font-size: 28px;
     font-weight: bold;
     margin-right: 20px;
     width: 50%;
-    margin: 30px;
-  }
-  
-  .about-list li{
-    margin: 20px;
+    margin: 50px;
+    margin-bottom: 150px;
+}
+
+.about-list li {
     font-size: 24px;
     font-weight: normal;
-    display: list-item;
-  }
+}
 
-  .about-list-img{
+.about-list-img {
     float: right;
     clear: both;
     height: 300px;
     width: 500px;
-    margin: 20px;
+
     border: 4px solid black;
     border-radius: 50px;
-  }
-  
+}
+
+.carousel{
+    top: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.c-item {
+    height: 650px;
+}
+
+.c-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.ca-p{
+    margin-top: 10rem;
+}
+
+
+
+
+/* PROS AND CONS */
+
+.accordion {
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+}
